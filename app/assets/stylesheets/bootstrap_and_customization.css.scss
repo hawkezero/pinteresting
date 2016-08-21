@@ -1,8 +1,21 @@
+@import 'https://fonts.googleapis.com/css?family=Kavoon';
+
 $body-bg: #3498db;
-$navbar-inverse-bg: #2c3e50;
-$navbar-inverse-link-color: #3498db;
-$brand-success: #f1c40f;
+$font-family: 'Kavoon', cursive;
+
+$navbar-default-bg: #ecf0f1;
+$navbar-default-link-color: #c0392b;
+$navbar-height: 40px;
+$brand-success: #c0392b;
 $brand-primary: #ecf0f1;
 $jumbotron-bg: #ecf0f1;
 
 @import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
