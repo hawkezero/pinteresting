@@ -7,16 +7,18 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- </head>
- <body>
+  </head>
+  <body>
 
   <%= render 'layouts/header' %>
     <div class="container">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      <% end %>
+      <% flash.each do |name, msg| %>
+     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+    <% end %>
+
+       
+    
     <%= yield %>
   </div>
-</body>
-
+  </body>
 </html>
