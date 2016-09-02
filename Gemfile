@@ -11,8 +11,10 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
-gem 'paperclip', github: 'thoughtbot/paperclip'
-gem 'aws-sdk', '<2.0'
+#gem 'paperclip', github: 'thoughtbot/paperclip'
+#gem 'aws-sdk', '<2.0'
+gem 'paperclip'
+gem 'aws-sdk'
 
 
 
