@@ -36,9 +36,11 @@ class PinsController < ApplicationController
     respond_to do |format|
       if @pin.update(pin_params)
         redirect_to @pin, notice: 'Pin was successfully updated.' 
-        render :show, status: :ok, location: @pins
+        return
+        render :show, status: :ok, location: @pins        
       else
-        render :edit 
+        render :edit
+        return 
       end
     end
   end
@@ -48,6 +50,7 @@ class PinsController < ApplicationController
     @pin.destroy
     respond_to do |format|
       redirect_to pins_url, notice: 'Pin was successfully destroyed.'
+      return
     end
   end
 
