@@ -5,10 +5,10 @@
       <div class="panel-body">
         <%= pin.description %>
         <%= pin.user.email if pin.user %>
-        <%= link_to 'Show', pin %>
+        <%= link_to 'Show', pin, style: "color:red" %>
         <% if pin.user == current_user %> 
-          <%= link_to 'Edit', edit_pin_path(pin) %>
-          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Edit', edit_pin_path(pin), style: "color:red" %>
+          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' }, style: "color:red" %>
         <% end %>
       </div>
     </div>
