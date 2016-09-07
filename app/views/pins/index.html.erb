@@ -4,7 +4,7 @@
       <%= image_tag pin.image.url(:medium) %>
       <div class="panel-body">
         <%= pin.description %>
-        <%= pin.user.email if pin.user %>
+        <%= pin.user.name if pin.user %>
         <%= link_to 'Show', pin, style: "color:red" %>
         <% if pin.user == current_user %> 
           <%= link_to 'Edit', edit_pin_path(pin), style: "color:red" %>
